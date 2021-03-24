@@ -1,6 +1,7 @@
 name: Cancel Previous Workflows
 on:
   workflow_run:
+    branches: [ main ]
     workflows: ["some github action", "another github action"]
     types:
       - requested
