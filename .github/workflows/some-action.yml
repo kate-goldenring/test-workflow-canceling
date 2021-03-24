@@ -1,4 +1,4 @@
-name: CI
+name: some action 
 on:
   push:
     branches: [ main ]

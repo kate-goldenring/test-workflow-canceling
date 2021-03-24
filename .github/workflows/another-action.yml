@@ -1,4 +1,4 @@
-name: another github action
+name: another action
 on:
   push:
     branches: [ main ]
