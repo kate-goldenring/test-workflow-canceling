@@ -1,7 +1,7 @@
 name: Cancel Previous Workflows
 on:
   workflow_run:
-    workflows: ["some-action.yml, another-action.yml"]
+    workflows: ["some github action, another github action"]
     types:
       - requested
 jobs:
