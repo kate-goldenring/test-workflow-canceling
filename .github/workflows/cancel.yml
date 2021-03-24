@@ -1,9 +1,13 @@
 name: Cancel Previous Workflows
 on:
-  pull_request:
-    branches: [ main ]
+  workflow_run:
+    workflows: ["some-action.yml, another-action.yml"]
+    branches: [main]
+    types:
+      - requested
 jobs:
   cancel:
+    if: (github.event_name != 'release') && (github.event_name != 'push') 
     runs-on: ubuntu-latest
     steps:
     - uses: styfle/cancel-workflow-action@0.8.0
