@@ -2,7 +2,6 @@ name: Cancel Previous Workflows
 on:
   workflow_run:
     workflows: ["some-action.yml, another-action.yml"]
-    branches: [main]
     types:
       - requested
 jobs:
