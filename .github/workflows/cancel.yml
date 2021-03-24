@@ -1,13 +1,13 @@
-name: Cancel Previous Workflows
+name: Cancel
 on:
   workflow_run:
-    workflows: ["some github action", "another github action"]
+    workflows: ["CI"]
     types:
       - requested
 jobs:
   cancel:
     runs-on: ubuntu-latest
     steps:
-    - uses: styfle/cancel-workflow-action@0.8.0
+    - uses: styfle/cancel-workflow-action@0.7.0
       with:
         workflow_id: ${{ github.event.workflow.id }}
